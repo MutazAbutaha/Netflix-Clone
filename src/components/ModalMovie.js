@@ -9,7 +9,7 @@ export default  function ModalCard (props){
         <Modal.Header closeButton>
           <Modal.Title>{props.movieData.title}||{props.movieData.title}</Modal.Title>
         </Modal.Header>
-        <img src = {props.movieData.posterPath} alt = {props.movieData.title}/>
+        <img src ={`https://image.tmdb.org/t/p/w500/${props.movieData.poster_path}`} alt = {props.movieData.title}/>
         <Modal.Body>{props.movieData.overview}</Modal.Body>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
         <Form.Label>add a comment</Form.Label>
