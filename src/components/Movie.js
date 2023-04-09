@@ -2,6 +2,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import ModalMovie from "./ModalMovie";
 import {useState} from 'react';
+import "./Movie.css"
 
 
 export default function Movie(props) {
@@ -12,9 +13,9 @@ export default function Movie(props) {
   const handleShow = () => setShow(true);
   return (
     <>
-    <div >
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={props.movieData.poster_path} alt = {props.movieData.title} />
+    <div id="cards">
+      <Card id="incards" style={{ width: "18rem" }}>
+        <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w500/${props.movieData.poster_path}`} alt = {props.movieData.title} />
         <Card.Body>
           <Card.Title>{props.movieData.title}</Card.Title>
           <Button variant="success" onClick={handleShow}>show details</Button>
