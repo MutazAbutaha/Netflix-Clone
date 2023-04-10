@@ -14,16 +14,16 @@ export default function Movie(props) {
   return (
     <>
     <div id="cards">
-      <Card id="incards" style={{ width: "18rem" }}>
+      <Card id="incards">
         <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w500/${props.movieData.poster_path}`} alt = {props.movieData.title} />
-        <Card.Body>
+        <Card.Body >
           <Card.Title>{props.movieData.title}</Card.Title>
           <Button variant="success" onClick={handleShow}>show details</Button>
         </Card.Body>
       </Card>
       <br></br>
     </div>
-    <ModalMovie show={show}  handleClose={handleClose} movieData = {props.movieData}/>
+    <ModalMovie show={show}  handleClose={handleClose} movieData = {props.movieData} commentHandler={props.commentHandler}/>
     </>
   );
 }
