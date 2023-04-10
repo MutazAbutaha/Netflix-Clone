@@ -1,0 +1,24 @@
+#incard {
+    display: flex;
+    width: 18rem
+}
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#card {
+    display: flex;
+    padding: 10px;
+}
+
+.button {
+    padding: 50px;
+}
+
+#textarea {
+    padding: 5px;
+}
+
+
+

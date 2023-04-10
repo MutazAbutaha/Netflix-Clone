@@ -16,7 +16,7 @@ export default function Home(){
     function commentHandler(newMovie , id){
         movies.map(movie=>{
             if(movie.id === id){
-                movie.comment = newMovie.userComment
+                movie.comments = newMovie.userComment
                 return movie;
             }else{
                 return movie;
