@@ -6,7 +6,7 @@ export default function MovieList(props){
         {
             props.movies.map(movie =>{
                 return(
-                    <Movie movieData={movie}/>
+                    <Movie movieData={movie}  commentHandler={props.commentHandler}/>
                 )
             })
         }

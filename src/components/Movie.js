@@ -13,17 +13,18 @@ export default function Movie(props) {
   const handleShow = () => setShow(true);
   return (
     <>
-    <div id="cards">
-      <Card id="incards" style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w500/${props.movieData.poster_path}`} alt = {props.movieData.title} />
-        <Card.Body>
+    <div id="card">
+      <Card id="incard">
+        <Card.Img id="img" variant="top" src={`https://image.tmdb.org/t/p/w500/${props.movieData.poster_path}`} alt = {props.movieData.title} />
+        <Card.Body >
           <Card.Title>{props.movieData.title}</Card.Title>
-          <Button variant="success" onClick={handleShow}>show details</Button>
+          <Card.Text>{props.movieData.release_date}</Card.Text>
+          <Button variant="success" onClick={handleShow}>Show details</Button>
         </Card.Body>
       </Card>
       <br></br>
     </div>
-    <ModalMovie show={show}  handleClose={handleClose} movieData = {props.movieData}/>
+    <ModalMovie show={show}  handleClose={handleClose} movieData = {props.movieData} commentHandler={props.commentHandler}/>
     </>
   );
 }

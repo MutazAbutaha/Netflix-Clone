@@ -12,6 +12,19 @@ export default function Home(){
         const moviesData = await response.json();
         setMovies(moviesData);
     }
+
+    function commentHandler(newMovie , id){
+        movies.map(movie=>{
+            if(movie.id === id){
+                movie.comments = newMovie.userComment
+                return movie;
+            }else{
+                return movie;
+            }
+        })
+    }
+
+  
     useEffect(()=>{
         trendingMovies();
     },[])  
@@ -20,7 +33,7 @@ export default function Home(){
         <>
         <h2>Welcome to Netflix</h2>
         <div id="card">
-        <MovieList  movies={movies}/>
+        <MovieList id="cards"  movies={movies} commentHandler={commentHandler}/>
         </div>
         </>
     )
